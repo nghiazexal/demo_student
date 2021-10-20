@@ -21,4 +21,11 @@ public class StudentController {
     public ResponseTemplateVO getStudentWithKhoa(@PathVariable("id") Long studentId) {
         return studentService.getStudentWithKhoa(studentId);
     }
+    @GetMapping("/rate/{id}")
+    public ResponseTemplateVO getStudentWithKhoa10(@PathVariable("id") Long studentId) {
+        for (int i =0; i<10;i++){
+            studentService.getStudentWithKhoa(studentId);
+        }
+        return studentService.getStudentWithKhoa(studentId);
+    }
 }
